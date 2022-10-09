@@ -1,2 +1,1 @@
-web: npm run start
-worker:  node main.jsx
+web: npm run dev
