@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://backend-ldc.herokuapp.com/",
   "scripts": {
+    "start": "vite --port 3000",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
