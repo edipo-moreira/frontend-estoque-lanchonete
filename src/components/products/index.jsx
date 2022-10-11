@@ -4,9 +4,9 @@ export const ProductList = props => (
     <List {...props}>
         <Datagrid rowClick="edit">
             <TextField source="id" disabled />
-            <TextField source="name" />
-            <TextField source="quantity" />
-            <TextField source="price" />            
+            <TextField source="name" label="Nome"/>
+            <TextField source="quantity" label="Quantidade disponível"/>
+            <TextField source="price" label="Preço Unitário" />            
         </Datagrid>
     </List>
 )
@@ -14,9 +14,9 @@ export const ProductList = props => (
 export const ProductCreate = props => (
     <Create {...props}>
         <SimpleForm>
-            <TextInput source="name" />
-            <NumberInput source="quantity" />
-            <NumberInput source="price" />            
+            <TextInput source="name" label="Nome" />
+            <NumberInput source="quantity" label="Quantidade disponível"/>
+            <NumberInput source="price" label="Preço Unitário"/>            
         </SimpleForm>
     </Create>
 )
@@ -25,9 +25,9 @@ export const ProductEdit = props => (
     <Edit {...props}>
         <SimpleForm>
             <TextInput source="id" disabled />
-            <TextInput source="name" />
-            <TextInput source="quantity" />
-            <TextInput source="price" />            
+            <TextInput source="name" label="Nome" />
+            <NumberInput source="quantity" label="Quantidade disponível"/>
+            <NumberInput source="price" label="Preço Unitário"/>             
         </SimpleForm>
     </Edit>
 )
