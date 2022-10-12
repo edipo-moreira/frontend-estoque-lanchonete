@@ -1,7 +1,9 @@
 import { List, Datagrid, TextField, Create, SimpleForm, TextInput, Edit, NumberInput } from 'react-admin'
+import { Pagination } from 'react-admin';
 
+const PostPagination = () => <Pagination rowsPerPageOptions={[10, 25, 50, 100]} />;
 export const ProductList = props => (
-    <List {...props}>
+    <List pagination={<PostPagination />} {...props}>
         <Datagrid rowClick="edit">
             <TextField source="id" disabled />
             <TextField source="name" label="Nome"/>

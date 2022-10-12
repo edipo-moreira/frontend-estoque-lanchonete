@@ -10,14 +10,16 @@ import {
   ReferenceInput,
   DateInput,
 } from "react-admin";
+import { Pagination } from 'react-admin';
 
+const PostPagination = () => <Pagination rowsPerPageOptions={[10, 25, 50, 100]} />;
 const postFilters = [
   <DateInput source="start_date" label="Data Inicial" />,
   <DateInput source="end_date" label="Data Final" />
 ];
 
 export const ProductHistoryList = (props) => (
-  <List {...props} filters={postFilters}>
+  <List pagination={<PostPagination />} {...props} filters={postFilters}>
     <Datagrid rowClick="edit">
       <TextField source="Product.name" label="Nome do produto" />
       <TextField source="Product.quantity" label="Quantidade disponível" />
