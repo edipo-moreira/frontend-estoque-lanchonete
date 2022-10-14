@@ -5,6 +5,7 @@ import { MyAppBar } from './components/app-bar/app-bar'
 import { ProductHistoryCreate, ProductHistoryEdit, ProductHistoryList } from './components/products-history'
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import ptBrMessages from 'ra-language-pt-br';
+import { DashboardList } from './components/dashboard'
 
 const dataProvider = jsonServerProvider('https://backend-ldc.herokuapp.com')
 const MyLayout = (props) => <Layout {...props} appBar={MyAppBar} />;
@@ -16,7 +17,8 @@ const i18nProvider = polyglotI18nProvider(locale => messages[locale], 'pt-br');
 
 function App() {
   return (
-   <Admin i18nProvider={i18nProvider} dataProvider={dataProvider} layout={MyLayout}>
+   <Admin dataProvider={dataProvider} layout={MyLayout}>
+    <Resource options={{ label: 'DashBoard' }} name='dashboard' list={DashboardList} />
     <Resource options={{ label: 'Produtos' }} name='products' list={ProductList} create={ProductCreate} edit={ProductEdit} />
     <Resource options={{ label: 'Controle de Estoque' }} name='products-history' list={ProductHistoryList} create={ProductHistoryCreate} edit={ProductHistoryEdit} />
    </Admin>
