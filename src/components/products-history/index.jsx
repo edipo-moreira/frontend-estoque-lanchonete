@@ -7,6 +7,7 @@ import {
   Edit,
   NumberInput,
   SelectInput,
+  AutocompleteInput,
   ReferenceInput,
   DateInput,
 } from "react-admin";
@@ -31,10 +32,10 @@ export const ProductHistoryList = (props) => (
 );
 
 export const ProductHistoryCreate = (props) => (
-  <Create {...props}>
+  <Create  redirect="list" {...props}>
     <SimpleForm>
-      <ReferenceInput source="fk_product_id" reference="products">
-        <SelectInput optionText="name" label="Produto"/>
+      <ReferenceInput source="fk_product_id" reference="all-products">
+        <AutocompleteInput optionText="name" label="Produto"/>
       </ReferenceInput>
       <NumberInput source="quantity" label="Quantidade"/>
     </SimpleForm>
@@ -42,10 +43,10 @@ export const ProductHistoryCreate = (props) => (
 );
 
 export const ProductHistoryEdit = (props) => (
-  <Edit {...props}>
+  <Edit  redirect="list" {...props}>
     <SimpleForm>
-    <ReferenceInput source="fk_product_id" reference="products">
-        <SelectInput optionText="name" label="Produto"/>
+    <ReferenceInput source="fk_product_id" reference="all-products">
+        <AutocompleteInput optionText="name" label="Produto"/>
       </ReferenceInput>
       <NumberInput source="quantity" label="Quantidade"/>
     </SimpleForm>
