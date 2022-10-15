@@ -19,7 +19,7 @@ const postFilters = [
 ];
 
 export const ProductHistoryList = (props) => (
-  <List pagination={<PostPagination />} {...props} filters={postFilters}>
+  <List empty={false} pagination={<PostPagination />} {...props} filters={postFilters}>
     <Datagrid rowClick="edit">
       <TextField source="Product.name" label="Nome do produto" />
       <TextField source="Product.quantity" label="Quantidade disponível" />

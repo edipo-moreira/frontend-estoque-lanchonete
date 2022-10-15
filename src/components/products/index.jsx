@@ -1,8 +1,10 @@
 import { List, Datagrid, TextField, Create, SimpleForm, TextInput, Edit, NumberInput } from 'react-admin'
 import PostPagination from '../config/pagination'
+import { Typography } from '@mui/material';
+
 
 export const ProductList = props => (
-    <List pagination={<PostPagination />} {...props}>
+    <List  pagination={<PostPagination />} {...props}>
         <Datagrid rowClick="edit">
             <TextField source="id" disabled />
             <TextField source="name" label="Nome"/>
@@ -10,13 +12,7 @@ export const ProductList = props => (
             <TextField source="price" label="Preço Unitário" />   
                   
         </Datagrid>
-        <Datagrid rowClick="edit">
-            <TextField source="id" disabled />
-            <TextField source="name" label="Nome"/>
-            <TextField source="quantity" label="Quantidade disponível"/>
-            <TextField source="price" label="Preço Unitário" />   
-                  
-        </Datagrid>
+        
     </List>
     
 )

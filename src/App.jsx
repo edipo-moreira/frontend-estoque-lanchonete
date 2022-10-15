@@ -18,7 +18,7 @@ const i18nProvider = polyglotI18nProvider(locale => messages[locale], 'pt-br');
 function App() {
   return (
    <Admin dataProvider={dataProvider} layout={MyLayout}>
-    <Resource options={{ label: 'DashBoard' }} name='dashboard' list={DashboardList} />
+    <Resource options={{ label: 'Dashboard' }} name='dashboard' list={DashboardList} />
     <Resource options={{ label: 'Produtos' }} name='products' list={ProductList} create={ProductCreate} edit={ProductEdit} />
     <Resource options={{ label: 'Controle de Estoque' }} name='products-history' list={ProductHistoryList} create={ProductHistoryCreate} edit={ProductHistoryEdit} />
    </Admin>

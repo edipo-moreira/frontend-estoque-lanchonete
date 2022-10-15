@@ -18,11 +18,10 @@ const postFilters = [
 ];
 
 export const DashboardList = (props) => (
-  <List pagination={PostPagination} {...props} filters={postFilters}>
+  <List empty={false} {...props} filters={postFilters}>
     <Datagrid>
-    <TextField source="Product.date" label="Data" />
-      <TextField source="Product.name" label="Nome do produto" />
-      <TextField source="quantity" label="Quantidade utilizada" />
+    <TextField source="start_date" label="Data Inicial" />
+    <TextField source="end_date" label="Data Final" />
       <TextField source="total" label="Total" />
     </Datagrid>
   </List>
