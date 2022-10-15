@@ -31,7 +31,7 @@ export const ProductList = (props) => (
 );
 
 export const ProductCreate = (props) => (
-  <Create {...props}>
+  <Create redirect="list" {...props}>
     <SimpleForm>
       <TextInput source="name" label="Nome" />
       <NumberInput source="quantity" label="Quantidade disponível" />
@@ -41,7 +41,7 @@ export const ProductCreate = (props) => (
 );
 
 export const ProductEdit = (props) => (
-  <Edit {...props}>
+  <Edit redirect="list" {...props}>
     <SimpleForm>
       <TextInput source="id" disabled />
       <TextInput source="name" label="Nome" />
