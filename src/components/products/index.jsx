@@ -25,6 +25,7 @@ export const ProductList = (props) => (
           currency: "BRL",
         }}
         sx={{ fontWeight: "bold" }}
+        label="Preço"
       />
     </Datagrid>
   </List>
