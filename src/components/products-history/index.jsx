@@ -41,6 +41,8 @@ export const ProductHistoryList = (props) => (
           currency: "BRL",
         }}
         textAlign="left"
+        label="Preço Unitário"
+
       />
       <TextField source="quantity" label="Quantidade utilizada" />
       <NumberField 
